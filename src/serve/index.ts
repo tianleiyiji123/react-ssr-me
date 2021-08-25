@@ -1,8 +1,11 @@
 import Koa from 'koa'
+import path from 'path'
 
-import renderJsxHtml from './render'
+import renderJsxHtml from './render.jsx'
 
 const app = new Koa()
+
+app.use(require('koa-static')(path.join(process.cwd(), './public')))
 
 app.use(async ctx => {
   ctx.body = renderJsxHtml()
