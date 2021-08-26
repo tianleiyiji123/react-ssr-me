@@ -1,0 +1,186 @@
+{
+  "hash": "fd40c8c1f69debaa2db1",
+  "publicPath": "/static/",
+  "outputPath": "/Users/lwang/myproject/study/react-ssr/server-bundle",
+  "assetsByChunkName": {
+    "main": [
+      "root.server.js"
+    ],
+    "pages-list": [
+      "pages-list.root.server.js"
+    ],
+    "pages-detail": [
+      "pages-detail.root.server.js"
+    ]
+  },
+  "assets": [
+    {
+      "type": "asset",
+      "name": "root.server.js",
+      "size": 3157524,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false
+      },
+      "chunkNames": [
+        "main"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "main"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-237f95.root.server.js",
+      "size": 37265,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-237f95"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "pages-list.root.server.js",
+      "size": 8930,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false
+      },
+      "chunkNames": [
+        "pages-list"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "pages-list"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "pages-detail.root.server.js",
+      "size": 2140,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false
+      },
+      "chunkNames": [
+        "pages-detail"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "pages-detail"
+      ],
+      "auxiliaryChunks": []
+    }
+  ],
+  "namedChunkGroups": {
+    "main": {
+      "name": "main",
+      "chunks": [
+        "main"
+      ],
+      "assets": [
+        {
+          "name": "root.server.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-list": {
+      "name": "pages-list",
+      "chunks": [
+        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-237f95",
+        "pages-list"
+      ],
+      "assets": [
+        {
+          "name": "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-237f95.root.server.js"
+        },
+        {
+          "name": "pages-list.root.server.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-detail": {
+      "name": "pages-detail",
+      "chunks": [
+        "pages-detail"
+      ],
+      "assets": [
+        {
+          "name": "pages-detail.root.server.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "generator": "loadable-components",
+  "chunks": [
+    {
+      "id": "main",
+      "files": [
+        "root.server.js"
+      ]
+    },
+    {
+      "id": "pages-list",
+      "files": [
+        "pages-list.root.server.js"
+      ]
+    },
+    {
+      "id": "pages-detail",
+      "files": [
+        "pages-detail.root.server.js"
+      ]
+    },
+    {
+      "id": "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-237f95",
+      "files": [
+        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-237f95.root.server.js"
+      ]
+    }
+  ]
+}

@@ -8,6 +8,7 @@ const path = require('path')
 const {
   merge
 } = require('webpack-merge')
+const LoadablePlugin = require('@loadable/webpack-plugin')
 const baseConfig = require('./webpack.config')
 const theme = require('../package.json').theme
 const serverConfig = {
@@ -75,7 +76,9 @@ const serverConfig = {
       }
 
     ]
-  }
-
+  },
+  plugins: [
+    new LoadablePlugin()
+  ]
 }
 module.exports = merge(baseConfig, serverConfig)

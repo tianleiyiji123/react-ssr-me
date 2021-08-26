@@ -1,17 +1,18 @@
 import Koa from 'koa'
 import path from 'path'
 
-import renderJsxHtml from './render.jsx'
+import renderJsxHtml from './render'
 
 const app = new Koa()
 
 app.use(require('koa-static')(path.join(process.cwd(), './public')))
 
 app.use(async ctx => {
-  ctx.body = renderJsxHtml()
+  console.log(ctx.url, 999)
+  ctx.body = renderJsxHtml(ctx)
 })
 
-const server = app.listen(3000, (err) => {
+const server = app.listen(3000, () => {
   console.log('服务启动成功，端口3000...')
 })
 // console.log(server)
