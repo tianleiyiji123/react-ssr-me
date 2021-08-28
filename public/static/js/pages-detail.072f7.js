@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkreact_ssr=self.webpackChunkreact_ssr||[]).push([[898],{6151:(e,r,s)=>{s.r(r),s.d(r,{default:()=>a});s(7294);var c=s(5977),t=s(5893);const a=()=>{var e=(0,c.UO)()["imgUrl"];return(0,t.jsx)("div",{children:(0,t.jsx)("img",{src:decodeURIComponent(e),alt:"图片"})})}}}]);

@@ -20,10 +20,10 @@ const isProd = process.env.NODE_ENV === 'production'
 const clientConfig = {
   entry: path.join(__dirname, '../src/client/index'),
   output: {
-    path: path.join(__dirname, '../public/static/'),
-    filename: 'js/[name].[hash:5].js',
+    path: path.join(__dirname, '../client-bundle/'),
+    filename: 'js/[name].js',
     // chunkFilename: "js/[name].js",
-    publicPath: '/static/'
+    publicPath: '/'
   },
   module: {
     rules: [{
@@ -41,7 +41,7 @@ if (isDev) {
     include: /node_modules/,
     use: [
       {
-        loader: 'style-loader'
+        loader: MiniCssExtractPlugin.loader
       },
       {
         loader: 'css-loader',
@@ -68,16 +68,20 @@ if (isDev) {
     test: /\.less$/,
     exclude: /node_modules/,
     use: [
-      "isomorphic-style-loader",
+      // {
+      //   loader: 'style-loader'
+      // },
+      // "isomorphic-style-loader",
+      {
+        loader: MiniCssExtractPlugin.loader
+      },
       {
         loader: 'css-loader',
         options: {
           importLoaders: 2,
           esModule: false,
           modules: {
-            getLocalIdent: (context, localIdentName, localName, options) => {
-              return `${localName}_${Date.now()}`
-            },
+            localIdentName: "[name]__[local]__[hash:base64:7]",
           },
         }
       },
@@ -96,7 +100,6 @@ if (isDev) {
     ]
   }, {
     test: /\.css$/,
-    include: /node_modules/,
     use: [
       {
         loader: 'style-loader'
@@ -112,7 +115,7 @@ if (isDev) {
     path.join(__dirname, '../src/client/index'),
   ]
   clientConfig.output = {
-    path: path.join(__dirname, '../dev-public'),
+    path: path.join(__dirname, '../public'),
     filename: '[name].client.js',
     chunkFilename: "[name].js",
     publicPath: '/'
@@ -129,7 +132,7 @@ if (isDev) {
       progress: true,
     },
     open: true,
-    static: path.join(__dirname, '../dev-public'),
+    static: path.join(__dirname, '../public'),
     proxy: {
       '/api': 'http://localhost:3000'
     },
@@ -140,9 +143,19 @@ if (isDev) {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: 'music',
-      filename: path.join(__dirname, '../dev-public/index.html'),
-      template: path.join(__dirname, '../dev-public/index.html'),
+      filename: path.join(__dirname, '../public/index.html'),
+      template: path.join(__dirname, '../public/index.html'),
       inject: true,
+    }),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].chunk.css',
+      attributes: {
+        id: "target",
+        "data-target": "example",
+      },
     }),
   ])
 }
@@ -152,7 +165,7 @@ if (isProd) {
     include: /node_modules/,
     use: [
       {
-        loader: 'style-loader'
+        loader: MiniCssExtractPlugin.loader,
       },
       {
         loader: 'css-loader',
@@ -179,18 +192,15 @@ if (isProd) {
     test: /\.less$/,
     exclude: /node_modules/,
     use: [
-      "isomorphic-style-loader",
       {
-        loader: MiniCssExtractPlugin.loader
+        loader: MiniCssExtractPlugin.loader,
       },
       {
         loader: 'css-loader',
         options: {
           importLoaders: 2,
           modules: {
-            getLocalIdent: (context, localIdentName, localName, options) => {
-              return `${localName}_${Date.now()}`
-            },
+            localIdentName: "[name]__[local]__[hash:base64:7]",
           },
         }
       },
@@ -210,29 +220,34 @@ if (isProd) {
   }, {
     test: /\.css$/,
     use: [
-      "isomorphic-style-loader",
+      {
+        loader: MiniCssExtractPlugin.loader,
+      },
       {
         loader: 'css-loader',
         options: {
-          modules: {
-            getLocalIdent: (context, localIdentName, localName, options) => {
-              return `${localName}_${Date.now()}`
-            },
-          },
+          modules: false
         }
       },
       "postcss-loader"
     ]
   }]
-  clientConfig.mode = 'production'
+  clientConfig.mode = 'development'
   clientConfig.devtool = false
   clientConfig.module.rules = clientConfig.module.rules.concat(prodRules)
   clientConfig.optimization = {
-    minimizer: [new UglifyJsPlugin()],
+    // minimizer: [new UglifyJsPlugin()],
     runtimeChunk: {
       name: "manifest"
     },
     splitChunks: {
+      // chunks: 'async',
+      // minSize: 30000,
+      // minChunks: 1,
+      // maxAsyncRequests: 5,
+      // maxInitialRequests: 3,
+      // automaticNameDelimiter: '~',
+      // name: true,
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
@@ -248,14 +263,14 @@ if (isProd) {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].chunk.css'
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[name].chunk.css',
     }),
     new HtmlWebpackPlugin({
       title: '周海涛的个人网',
-      filename: path.join(__dirname, '../public/static/index.html'),
-      template: path.join(__dirname, '../dev-public/index.html'),
-      // favicon: path.join(__dirname, '../dev-public/favicon.ico'),
+      filename: path.join(__dirname, '../client-bundle/static/index.html'),
+      template: path.join(__dirname, '../public/index.html'),
+      // favicon: path.join(__dirname, '../public/favicon.ico'),
     })
   ])
 

@@ -5,11 +5,13 @@ import renderJsxHtml from './render'
 
 const app = new Koa()
 
-app.use(require('koa-static')(path.join(process.cwd(), './public')))
+app.use(require('koa-static')(path.join(process.cwd(), './client-bundle')))
+app.use(require('koa-static')(path.join(process.cwd(), './server-bundle')))
 
 app.use(async ctx => {
-  console.log(ctx.url, 999)
-  ctx.body = renderJsxHtml(ctx)
+  if (ctx.originalUrl.match(/(list|detail|subDetail)/)) {
+    ctx.body = renderJsxHtml(ctx)
+  }
 })
 
 const server = app.listen(3000, () => {

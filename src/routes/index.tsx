@@ -24,5 +24,11 @@ const detail: RouteItem = {
     ...loadableConfig
   })
 }
+const subDetail: RouteItem = {
+  path: '/subDetail',
+  component: loadable(() => import('@/pages/detail/subDetail'), {
+    ...loadableConfig
+  })
+}
 
-export default [list, detail]
+export default [list, detail, subDetail]

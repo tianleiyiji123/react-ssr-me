@@ -6,9 +6,9 @@
   "scripts": {
     "run": "npm run build:client && npm run build:serve && npm run start",
     "dev": "babel-node ./src/serve/index.js",
-    "start": "node ./server-bundle/root.server.js",
+    "start": "node ./server-bundle/js/main.js",
     "start:client": "NODE_ENV=development webpack-dev-server --config ./config/webpack.client.config.js --progress",
-    "build:client": "rimraf ./public && NODE_ENV=production webpack --config ./config/webpack.client.config.js --progress",
+    "build:client": "rimraf ./client-bundle && NODE_ENV=production webpack --config ./config/webpack.client.config.js --progress",
     "build:serve": "rimraf ./server-bundle && NODE_ENV=production webpack --config ./config/webpack.serve.config.js --progress"
   },
   "keywords": [],
@@ -49,6 +49,7 @@
     "babel-plugin-import": "^1.13.3",
     "babel-preset-react-app": "^10.0.0",
     "css-loader": "^6.2.0",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "isomorphic-style-loader": "^5.3.0",
     "less": "^4.1.1",
