@@ -12,6 +12,7 @@ const LoadablePlugin = require('@loadable/webpack-plugin')
 const baseConfig = require('./webpack.config')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const nodeExternals = require('webpack-node-externals')
 const theme = require('../package.json').theme
 const serverConfig = {
   entry: path.resolve(__dirname, '../src/serve/index'),
@@ -19,7 +20,9 @@ const serverConfig = {
     path: path.resolve(__dirname, '../server-bundle'),
     // filename: 'js/root.server.js',
     filename: 'js/[name].js',
-    publicPath: '/'
+    // chunkFilename: "js/[name].[contenthash:8].js",
+    publicPath: '/',
+    libraryTarget: 'commonjs2'
   },
   mode: 'development',
   target: "node",
@@ -28,6 +31,9 @@ const serverConfig = {
         test: /\.(js|tsx|jsx|ts|mjs)$/,
         loader: 'babel-loader',
         exclude: /node_modules/,
+        options: {
+          caller: { target: 'node' },
+        },
       },
       {
         test: /\.less$/,
@@ -35,13 +41,16 @@ const serverConfig = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              emit: true
+            }
           },
           {
             loader: 'css-loader',
             options: {
               importLoaders: 2,
               modules: false,
-              esModule: false,
+              // esModule: false,
             }
           },
           {
@@ -61,9 +70,11 @@ const serverConfig = {
         test: /\.less$/,
         exclude: /node_modules/,
         use: [
-          // "isomorphic-style-loader",
           {
             loader: MiniCssExtractPlugin.loader,
+            options: {
+              emit: true
+            }
           },
           {
             loader: 'css-loader',
@@ -91,7 +102,10 @@ const serverConfig = {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCssExtractPlugin.loader
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              emit: true
+            }
           },
           {
             loader: 'css-loader',
@@ -104,37 +118,36 @@ const serverConfig = {
       }
     ]
   },
+  externals: ['@loadable/component', nodeExternals()]
   optimization: {
     // minimizer: [new UglifyJsPlugin()],
-    runtimeChunk: {
-      name: "manifest"
-    },
+    runtimeChunk: false,
     splitChunks: {
-      // chunks: 'async',
+      chunks: 'all',
       // minSize: 30000,
       // minChunks: 1,
       // maxAsyncRequests: 5,
       // maxInitialRequests: 3,
       // automaticNameDelimiter: '~',
       // name: true,
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: "vendors",
-          priority: -20,
-          chunks: "all"
-        }
-      }
+      // cacheGroups: {
+      //   vendor: {
+      //     test: /[\\/]node_modules[\\/]/,
+      //     name: "vendors",
+      //     priority: -20,
+      //     chunks: "all"
+      //   }
+      // }
     }
   },
   plugins: [
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: 'css/[name].css',
-      chunkFilename: 'css/[name].chunk.css'
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].chunk.css'
     }),
     new LoadablePlugin(),
-  ]
+  ],
 }
 module.exports = merge(baseConfig, serverConfig)

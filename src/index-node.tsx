@@ -10,6 +10,14 @@ import App from '@/pages/index'
 //   const removeCss = styles.map(style => style._insertCss())
 //   return () => removeCss.forEach(dispose => dispose())
 // }
+const Server = () => {
+  return (
+    <Router>
+      <App />
+    </Router>
+  )
+}
+export default 
 
 ReactDom.hydrate(
   // <Provider value={{ insertCss }}>

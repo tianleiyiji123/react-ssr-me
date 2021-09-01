@@ -292,7 +292,7 @@ var subDetail = {
 },
 /******/ __webpack_require__ => { // webpackRuntimeModules
 /******/ var __webpack_exec__ = (moduleId) => (__webpack_require__(__webpack_require__.s = moduleId))
-/******/ __webpack_require__.O(0, ["vendors"], () => (__webpack_exec__("./src/client/index.tsx")));
+/******/ __webpack_require__.O(0, ["vendors-node_modules_babel_runtime-corejs3_core-js_instance_filter_js-node_modules_babel_runt-053bd9"], () => (__webpack_exec__("./src/client/index.tsx")));
 /******/ var __webpack_exports__ = __webpack_require__.O();
 /******/ }
 ]);

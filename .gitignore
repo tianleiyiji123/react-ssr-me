@@ -2,3 +2,5 @@ node_modules
 .git
 .vscode
 .idea
+server-bundle/*
+client-bundle/*

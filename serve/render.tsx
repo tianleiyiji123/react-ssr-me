@@ -15,38 +15,44 @@ const renderHtml = (ctx: any) => {
     process.cwd(),
     './server-bundle/loadable-stats.json'
   )
-  console.log(ctx.originalUrl)
+  // console.log(ctx.originalUrl)
   const routeMatch = ctx.originalUrl.split('/')[1]
   const entrypoints = `pages-${routeMatch}`
-  console.log(entrypoints)
-  const extractor = new ChunkExtractor({ statsFile, entrypoints: [entrypoints] })
+  const extractor = new ChunkExtractor({ statsFile, entrypoints: ['main', entrypoints] })
   
-  // const insertCss = (...styles: any[]) => {
-  //   styles.forEach(style => {
-  //     css.add(style._getCss())
-  //   })
-  // }
   const jsx = extractor.collectChunks(
-    // <StyleContext.Provider value={{ insertCss }}>
-      <StaticRouter location={ctx.originalUrl} context={context}>
-        <App />
-      </StaticRouter>
-    // </StyleContext.Provider>
+    <StaticRouter location={ctx.originalUrl} context={context}>
+      <App />
+    </StaticRouter>
   )
-  // const scriptTags = extractor.getScriptTags()
+  const scriptTags = extractor.getScriptTags()
   const styleTags = extractor.getStyleTags()
+  // 获取当前页面所有css资源列表文件
+  const cssFilesArr = [...Array.from(styleTags.matchAll(/href=\"\/css\/([\s\S]+?\.css)\"/g))].map(item => item ? item[1] : '')
 
-  console.log(styleTags, 111)
+  let styleStr = ''
 
+  const styleFiles = fse.readdirSync(path.resolve(process.cwd(), './server-bundle/css'))
+
+  styleFiles.forEach((cssfile, index) => {
+    if (cssFilesArr.includes(cssfile)) {
+      console.log(cssfile, 9000)
+      const style = fse.readFileSync(path.resolve(process.cwd(), './server-bundle/css/' + cssfile))
+      styleStr += `<style id='${cssfile}-${index}'>${style}</style>`
+    }
+  })
+
+  console.log(scriptTags)
   const body = renderToString(jsx)
   // 获取模板
   const template = fse.readFileSync(
-    path.join(process.cwd(), '/client-bundle/static/index.html'),
+    path.join(process.cwd(), '/public/index.html'),
     'utf-8'
     )
   return template
     .replace(/(id=\"root\"\>)/, `$1${body}`)
     .replace(/(\<\/head\>)/, `${styleTags}$1`)
+    .replace(/(\<\/head\>)/, `${scriptTags}$1`)
     // .replace(/(\<\/head\>)/, `${styleTags}$1`)
 }
 

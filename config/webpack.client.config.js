@@ -22,7 +22,7 @@ const clientConfig = {
   output: {
     path: path.join(__dirname, '../client-bundle/'),
     filename: 'js/[name].js',
-    // chunkFilename: "js/[name].js",
+    // chunkFilename: "js/[name].[contenthash:8].js",
     publicPath: '/'
   },
   module: {
@@ -238,24 +238,24 @@ if (isProd) {
   clientConfig.optimization = {
     // minimizer: [new UglifyJsPlugin()],
     runtimeChunk: {
-      name: "manifest"
+      name: 'runtime'
     },
     splitChunks: {
-      // chunks: 'async',
+      chunks: 'all',
       // minSize: 30000,
       // minChunks: 1,
       // maxAsyncRequests: 5,
       // maxInitialRequests: 3,
       // automaticNameDelimiter: '~',
       // name: true,
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: "vendors",
-          priority: -20,
-          chunks: "all"
-        }
-      }
+      // cacheGroups: {
+      //   vendor: {
+      //     test: /[\\/]node_modules[\\/]/,
+      //     name: "vendors",
+      //     priority: -20,
+      //     chunks: "all"
+      //   }
+      // }
     }
   }
 
@@ -263,15 +263,15 @@ if (isProd) {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: 'css/[name].css',
-      chunkFilename: 'css/[name].chunk.css',
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].chunk.css',
     }),
-    new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin ({
       title: '周海涛的个人网',
       filename: path.join(__dirname, '../client-bundle/static/index.html'),
       template: path.join(__dirname, '../public/index.html'),
       // favicon: path.join(__dirname, '../public/favicon.ico'),
-    })
+    }),
   ])
 
 }

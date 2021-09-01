@@ -1,59 +1,32 @@
 {
-  "hash": "e875eb7c89e80a79356e",
+  "hash": "786c0fec1b3dafe1e920",
   "publicPath": "/",
   "outputPath": "/Users/lwang/myproject/study/react-ssr/server-bundle",
   "assetsByChunkName": {
     "main": [
       "js/main.js"
     ],
-    "manifest": [
-      "js/manifest.js"
+    "runtime": [
+      "js/runtime.js"
     ],
     "pages-list": [
-      "css/pages-list.chunk.css",
+      "css/pages-list.4cd00334.chunk.css",
       "js/pages-list.js"
     ],
     "pages-detail": [
-      "css/pages-detail.chunk.css",
+      "css/pages-detail.f0955f2b.chunk.css",
       "js/pages-detail.js"
     ],
     "pages-detail-subDetail": [
-      "css/pages-detail-subDetail.chunk.css",
+      "css/pages-detail-subDetail.55867409.chunk.css",
       "js/pages-detail-subDetail.js"
-    ],
-    "vendors": [
-      "css/vendors.css",
-      "js/vendors.js"
     ]
   },
   "assets": [
     {
       "type": "asset",
-      "name": "js/vendors.js",
-      "size": 3003178,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [
-        "vendors"
-      ],
-      "chunkIdHints": [
-        "vendor"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07.js",
-      "size": 991210,
+      "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.js",
+      "size": 3000004,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -67,7 +40,28 @@
       "auxiliaryChunkNames": [],
       "auxiliaryChunkIdHints": [],
       "chunks": [
-        "vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07"
+        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a"
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "js/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.js",
+      "size": 986640,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e"
       ],
       "auxiliaryChunks": []
     },
@@ -115,12 +109,15 @@
     },
     {
       "type": "asset",
-      "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.chunk.css",
+      "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.fe6db874.chunk.css",
       "size": 120544,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
-      "info": {},
+      "info": {
+        "immutable": true,
+        "contenthash": "fe6db874"
+      },
       "chunkNames": [],
       "chunkIdHints": [
         "vendors"
@@ -134,12 +131,15 @@
     },
     {
       "type": "asset",
-      "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07.chunk.css",
+      "name": "css/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.88bc9d2a.chunk.css",
       "size": 104785,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
-      "info": {},
+      "info": {
+        "immutable": true,
+        "contenthash": "88bc9d2a"
+      },
       "chunkNames": [],
       "chunkIdHints": [
         "vendors"
@@ -147,18 +147,21 @@
       "auxiliaryChunkNames": [],
       "auxiliaryChunkIdHints": [],
       "chunks": [
-        "vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07"
+        "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e"
       ],
       "auxiliaryChunks": []
     },
     {
       "type": "asset",
-      "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.chunk.css",
+      "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css",
       "size": 49162,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
-      "info": {},
+      "info": {
+        "immutable": true,
+        "contenthash": "60f1f932"
+      },
       "chunkNames": [],
       "chunkIdHints": [
         "vendors"
@@ -193,29 +196,30 @@
     },
     {
       "type": "asset",
-      "name": "css/vendors.css",
+      "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.98fdda85.css",
       "size": 31090,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
-      "info": {},
-      "chunkNames": [
-        "vendors"
-      ],
+      "info": {
+        "immutable": true,
+        "contenthash": "98fdda85"
+      },
+      "chunkNames": [],
       "chunkIdHints": [
-        "vendor"
+        "vendors"
       ],
       "auxiliaryChunkNames": [],
       "auxiliaryChunkIdHints": [],
       "chunks": [
-        "vendors"
+        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a"
       ],
       "auxiliaryChunks": []
     },
     {
       "type": "asset",
       "name": "js/main.js",
-      "size": 25948,
+      "size": 30641,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -235,8 +239,8 @@
     },
     {
       "type": "asset",
-      "name": "js/manifest.js",
-      "size": 11087,
+      "name": "js/runtime.js",
+      "size": 11622,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -244,13 +248,13 @@
         "javascriptModule": false
       },
       "chunkNames": [
-        "manifest"
+        "runtime"
       ],
       "chunkIdHints": [],
       "auxiliaryChunkNames": [],
       "auxiliaryChunkIdHints": [],
       "chunks": [
-        "manifest"
+        "runtime"
       ],
       "auxiliaryChunks": []
     },
@@ -319,12 +323,15 @@
     },
     {
       "type": "asset",
-      "name": "css/pages-list.chunk.css",
+      "name": "css/pages-list.4cd00334.chunk.css",
       "size": 1484,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
-      "info": {},
+      "info": {
+        "immutable": true,
+        "contenthash": "4cd00334"
+      },
       "chunkNames": [
         "pages-list"
       ],
@@ -338,12 +345,15 @@
     },
     {
       "type": "asset",
-      "name": "css/pages-detail-subDetail.chunk.css",
+      "name": "css/pages-detail-subDetail.55867409.chunk.css",
       "size": 839,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
-      "info": {},
+      "info": {
+        "immutable": true,
+        "contenthash": "55867409"
+      },
       "chunkNames": [
         "pages-detail-subDetail"
       ],
@@ -357,12 +367,15 @@
     },
     {
       "type": "asset",
-      "name": "css/pages-detail.chunk.css",
+      "name": "css/pages-detail.f0955f2b.chunk.css",
       "size": 792,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
-      "info": {},
+      "info": {
+        "immutable": true,
+        "contenthash": "f0955f2b"
+      },
       "chunkNames": [
         "pages-detail"
       ],
@@ -379,19 +392,19 @@
     "main": {
       "name": "main",
       "chunks": [
-        "manifest",
-        "vendors",
+        "runtime",
+        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a",
         "main"
       ],
       "assets": [
         {
-          "name": "js/manifest.js"
+          "name": "js/runtime.js"
         },
         {
-          "name": "css/vendors.css"
+          "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.98fdda85.css"
         },
         {
-          "name": "js/vendors.js"
+          "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.js"
         },
         {
           "name": "js/main.js"
@@ -414,7 +427,7 @@
       ],
       "assets": [
         {
-          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.chunk.css"
+          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css"
         },
         {
           "name": "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
@@ -423,13 +436,13 @@
           "name": "js/vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863.js"
         },
         {
-          "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.chunk.css"
+          "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.fe6db874.chunk.css"
         },
         {
           "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.js"
         },
         {
-          "name": "css/pages-list.chunk.css"
+          "name": "css/pages-list.4cd00334.chunk.css"
         },
         {
           "name": "js/pages-list.js"
@@ -447,12 +460,12 @@
       "chunks": [
         "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js",
         "vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863",
-        "vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07",
+        "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e",
         "pages-detail"
       ],
       "assets": [
         {
-          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.chunk.css"
+          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css"
         },
         {
           "name": "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
@@ -461,13 +474,13 @@
           "name": "js/vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863.js"
         },
         {
-          "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07.chunk.css"
+          "name": "css/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.88bc9d2a.chunk.css"
         },
         {
-          "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07.js"
+          "name": "js/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.js"
         },
         {
-          "name": "css/pages-detail.chunk.css"
+          "name": "css/pages-detail.f0955f2b.chunk.css"
         },
         {
           "name": "js/pages-detail.js"
@@ -488,13 +501,13 @@
       ],
       "assets": [
         {
-          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.chunk.css"
+          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css"
         },
         {
           "name": "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
         },
         {
-          "name": "css/pages-detail-subDetail.chunk.css"
+          "name": "css/pages-detail-subDetail.55867409.chunk.css"
         },
         {
           "name": "js/pages-detail-subDetail.js"
@@ -517,36 +530,36 @@
       ]
     },
     {
-      "id": "manifest",
+      "id": "runtime",
       "files": [
-        "js/manifest.js"
+        "js/runtime.js"
       ]
     },
     {
       "id": "pages-list",
       "files": [
-        "css/pages-list.chunk.css",
+        "css/pages-list.4cd00334.chunk.css",
         "js/pages-list.js"
       ]
     },
     {
       "id": "pages-detail",
       "files": [
-        "css/pages-detail.chunk.css",
+        "css/pages-detail.f0955f2b.chunk.css",
         "js/pages-detail.js"
       ]
     },
     {
       "id": "pages-detail-subDetail",
       "files": [
-        "css/pages-detail-subDetail.chunk.css",
+        "css/pages-detail-subDetail.55867409.chunk.css",
         "js/pages-detail-subDetail.js"
       ]
     },
     {
       "id": "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js",
       "files": [
-        "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.chunk.css",
+        "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css",
         "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
       ]
     },
@@ -557,24 +570,24 @@
       ]
     },
     {
-      "id": "vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07",
+      "id": "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a",
       "files": [
-        "css/vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07.chunk.css",
-        "js/vendors-node_modules_babel_runtime-corejs3_core-js_instance_map_js-node_modules_antd_lib_spac-23cb07.js"
+        "css/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.98fdda85.css",
+        "js/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.js"
+      ]
+    },
+    {
+      "id": "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e",
+      "files": [
+        "css/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.88bc9d2a.chunk.css",
+        "js/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.js"
       ]
     },
     {
       "id": "vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b",
       "files": [
-        "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.chunk.css",
+        "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.fe6db874.chunk.css",
         "js/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.js"
-      ]
-    },
-    {
-      "id": "vendors",
-      "files": [
-        "css/vendors.css",
-        "js/vendors.js"
       ]
     }
   ]
