@@ -8,11 +8,9 @@ import { loadableReady } from '@loadable/component'
 
 loadableReady(() =>
   ReactDom.hydrate(
-    // <Provider value={{ insertCss }}>
     <Router>
       <App />
     </Router>,
-    // </Provider>,
     document.getElementById('root')
   )
 )

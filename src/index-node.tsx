@@ -1,29 +1,16 @@
 import React from 'react'
-import ReactDom from 'react-dom'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-// import { Spin } from 'antd'
-// import { Provider } from 'isomorphic-style-loader/StyleContext'
-import App from '@/pages/index'
-// import routes from '@/routes'
+import { StaticRouter } from 'react-router-dom'
+import loadable from '@loadable/component'
+// import App from '@/pages/index'
+const A = loadable(() => import('./A'))
 
-// const insertCss = (...styles: any[]) => {
-//   const removeCss = styles.map(style => style._insertCss())
-//   return () => removeCss.forEach(dispose => dispose())
-// }
-const Server = () => {
+// export { default } from '@/pages/index'
+
+const Test = () => {
   return (
-    <Router>
-      <App />
-    </Router>
+    <div><A />44444</div>
+    // <div>2222</div>
   )
 }
-export default 
 
-ReactDom.hydrate(
-  // <Provider value={{ insertCss }}>
-    <Router>
-      <App />
-    </Router>,
-  // </Provider>,
-  document.getElementById('root')
-)
+export default Test

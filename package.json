@@ -4,6 +4,7 @@
   "description": "",
   "main": "./src/index.ts",
   "scripts": {
+    "dev": "rimraf ./client-bundle && rimraf ./server-bundle && NODE_ENV=production babel-node ./serve/index.js",
     "run": "npm run build:client && npm run build:serve && npm run start",
     "start": "node ./server-bundle/js/main.js",
     "start:client": "NODE_ENV=development webpack-dev-server --config ./config/webpack.client.config.js --progress",
@@ -53,6 +54,7 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "isomorphic-style-loader": "^5.3.0",
+    "koa-webpack": "^6.0.0",
     "less": "^4.1.1",
     "less-loader": "^10.0.1",
     "mini-css-extract-plugin": "^2.2.0",
@@ -65,7 +67,9 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
+    "webpack-dev-middleware": "^5.0.0",
     "webpack-dev-server": "^4.0.0",
+    "webpack-hot-client": "^4.2.0",
     "webpack-merge": "^5.8.0",
     "webpack-node-externals": "^3.0.0"
   },

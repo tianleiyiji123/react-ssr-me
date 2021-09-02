@@ -15,16 +15,15 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const nodeExternals = require('webpack-node-externals')
 const theme = require('../package.json').theme
 const serverConfig = {
-  entry: path.resolve(__dirname, '../src/serve/index'),
+  entry: path.resolve(process.cwd(), './src/index-node.tsx'),
   output: {
     path: path.resolve(__dirname, '../server-bundle'),
-    // filename: 'js/root.server.js',
     filename: 'js/[name].js',
-    // chunkFilename: "js/[name].[contenthash:8].js",
+    chunkFilename: "js/[name].js",
     publicPath: '/',
     libraryTarget: 'commonjs2'
   },
-  mode: 'development',
+  // mode: 'development',
   target: "node",
   module: {
     rules: [{
@@ -118,7 +117,7 @@ const serverConfig = {
       }
     ]
   },
-  externals: ['@loadable/component', nodeExternals()]
+  // externals: ['@loadable/component'],
   optimization: {
     // minimizer: [new UglifyJsPlugin()],
     runtimeChunk: false,
@@ -144,8 +143,8 @@ const serverConfig = {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: 'css/[name].[contenthash:8].css',
-      chunkFilename: 'css/[name].[contenthash:8].chunk.css'
+      filename: 'css/[name].css',
+      chunkFilename: 'css/[name].chunk.css'
     }),
     new LoadablePlugin(),
   ],

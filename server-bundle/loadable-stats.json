@@ -1,230 +1,29 @@
 {
-  "hash": "786c0fec1b3dafe1e920",
+  "hash": "b9261bbf648a9727464b",
   "publicPath": "/",
   "outputPath": "/Users/lwang/myproject/study/react-ssr/server-bundle",
   "assetsByChunkName": {
     "main": [
       "js/main.js"
     ],
-    "runtime": [
-      "js/runtime.js"
-    ],
-    "pages-list": [
-      "css/pages-list.4cd00334.chunk.css",
-      "js/pages-list.js"
-    ],
-    "pages-detail": [
-      "css/pages-detail.f0955f2b.chunk.css",
-      "js/pages-detail.js"
-    ],
-    "pages-detail-subDetail": [
-      "css/pages-detail-subDetail.55867409.chunk.css",
-      "js/pages-detail-subDetail.js"
+    "A": [
+      "js/A.js"
     ]
   },
   "assets": [
     {
       "type": "asset",
-      "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.js",
-      "size": 3000004,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.js",
-      "size": 986640,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863.js",
-      "size": 370118,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.js",
-      "size": 155496,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.fe6db874.chunk.css",
-      "size": 120544,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "fe6db874"
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "css/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.88bc9d2a.chunk.css",
-      "size": 104785,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "88bc9d2a"
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css",
-      "size": 49162,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "60f1f932"
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js",
-      "size": 41573,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.98fdda85.css",
-      "size": 31090,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "98fdda85"
-      },
-      "chunkNames": [],
-      "chunkIdHints": [
-        "vendors"
-      ],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
       "name": "js/main.js",
-      "size": 30641,
+      "size": 17080,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
-        "javascriptModule": false
+        "javascriptModule": false,
+        "minimized": true,
+        "related": {
+          "license": "js/main.js.LICENSE.txt"
+        }
       },
       "chunkNames": [
         "main"
@@ -232,158 +31,31 @@
       "chunkIdHints": [],
       "auxiliaryChunkNames": [],
       "auxiliaryChunkIdHints": [],
+      "filteredRelated": 1,
       "chunks": [
-        "main"
+        179
       ],
       "auxiliaryChunks": []
     },
     {
       "type": "asset",
-      "name": "js/runtime.js",
-      "size": 11622,
+      "name": "js/A.js",
+      "size": 170,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
       "info": {
-        "javascriptModule": false
+        "javascriptModule": false,
+        "minimized": true
       },
       "chunkNames": [
-        "runtime"
+        "A"
       ],
       "chunkIdHints": [],
       "auxiliaryChunkNames": [],
       "auxiliaryChunkIdHints": [],
       "chunks": [
-        "runtime"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/pages-list.js",
-      "size": 8882,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [
-        "pages-list"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "pages-list"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/pages-detail.js",
-      "size": 7361,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [
-        "pages-detail"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "pages-detail"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "js/pages-detail-subDetail.js",
-      "size": 4077,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "javascriptModule": false
-      },
-      "chunkNames": [
-        "pages-detail-subDetail"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "pages-detail-subDetail"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "css/pages-list.4cd00334.chunk.css",
-      "size": 1484,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "4cd00334"
-      },
-      "chunkNames": [
-        "pages-list"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "pages-list"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "css/pages-detail-subDetail.55867409.chunk.css",
-      "size": 839,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "55867409"
-      },
-      "chunkNames": [
-        "pages-detail-subDetail"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "pages-detail-subDetail"
-      ],
-      "auxiliaryChunks": []
-    },
-    {
-      "type": "asset",
-      "name": "css/pages-detail.f0955f2b.chunk.css",
-      "size": 792,
-      "emitted": false,
-      "comparedForEmit": false,
-      "cached": true,
-      "info": {
-        "immutable": true,
-        "contenthash": "f0955f2b"
-      },
-      "chunkNames": [
-        "pages-detail"
-      ],
-      "chunkIdHints": [],
-      "auxiliaryChunkNames": [],
-      "auxiliaryChunkIdHints": [],
-      "chunks": [
-        "pages-detail"
+        546
       ],
       "auxiliaryChunks": []
     }
@@ -392,20 +64,9 @@
     "main": {
       "name": "main",
       "chunks": [
-        "runtime",
-        "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a",
-        "main"
+        179
       ],
       "assets": [
-        {
-          "name": "js/runtime.js"
-        },
-        {
-          "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.98fdda85.css"
-        },
-        {
-          "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.js"
-        },
         {
           "name": "js/main.js"
         }
@@ -417,100 +78,14 @@
       "children": {},
       "childAssets": {}
     },
-    "pages-list": {
-      "name": "pages-list",
+    "A": {
+      "name": "A",
       "chunks": [
-        "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js",
-        "vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863",
-        "vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b",
-        "pages-list"
+        546
       ],
       "assets": [
         {
-          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css"
-        },
-        {
-          "name": "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
-        },
-        {
-          "name": "js/vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863.js"
-        },
-        {
-          "name": "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.fe6db874.chunk.css"
-        },
-        {
-          "name": "js/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.js"
-        },
-        {
-          "name": "css/pages-list.4cd00334.chunk.css"
-        },
-        {
-          "name": "js/pages-list.js"
-        }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": null,
-      "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 0,
-      "children": {},
-      "childAssets": {}
-    },
-    "pages-detail": {
-      "name": "pages-detail",
-      "chunks": [
-        "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js",
-        "vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863",
-        "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e",
-        "pages-detail"
-      ],
-      "assets": [
-        {
-          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css"
-        },
-        {
-          "name": "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
-        },
-        {
-          "name": "js/vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863.js"
-        },
-        {
-          "name": "css/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.88bc9d2a.chunk.css"
-        },
-        {
-          "name": "js/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.js"
-        },
-        {
-          "name": "css/pages-detail.f0955f2b.chunk.css"
-        },
-        {
-          "name": "js/pages-detail.js"
-        }
-      ],
-      "filteredAssets": 0,
-      "assetsSize": null,
-      "filteredAuxiliaryAssets": 0,
-      "auxiliaryAssetsSize": 0,
-      "children": {},
-      "childAssets": {}
-    },
-    "pages-detail-subDetail": {
-      "name": "pages-detail-subDetail",
-      "chunks": [
-        "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js",
-        "pages-detail-subDetail"
-      ],
-      "assets": [
-        {
-          "name": "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css"
-        },
-        {
-          "name": "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
-        },
-        {
-          "name": "css/pages-detail-subDetail.55867409.chunk.css"
-        },
-        {
-          "name": "js/pages-detail-subDetail.js"
+          "name": "js/A.js"
         }
       ],
       "filteredAssets": 0,
@@ -524,70 +99,15 @@
   "generator": "loadable-components",
   "chunks": [
     {
-      "id": "main",
+      "id": 179,
       "files": [
         "js/main.js"
       ]
     },
     {
-      "id": "runtime",
+      "id": 546,
       "files": [
-        "js/runtime.js"
-      ]
-    },
-    {
-      "id": "pages-list",
-      "files": [
-        "css/pages-list.4cd00334.chunk.css",
-        "js/pages-list.js"
-      ]
-    },
-    {
-      "id": "pages-detail",
-      "files": [
-        "css/pages-detail.f0955f2b.chunk.css",
-        "js/pages-detail.js"
-      ]
-    },
-    {
-      "id": "pages-detail-subDetail",
-      "files": [
-        "css/pages-detail-subDetail.55867409.chunk.css",
-        "js/pages-detail-subDetail.js"
-      ]
-    },
-    {
-      "id": "vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js",
-      "files": [
-        "css/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.60f1f932.chunk.css",
-        "js/vendors-node_modules_antd_lib_button_index_js-node_modules_antd_lib_button_style_index_js.js"
-      ]
-    },
-    {
-      "id": "vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863",
-      "files": [
-        "js/vendors-node_modules_ant-design_icons_EllipsisOutlined_js-node_modules_antd_lib__util_hooks_u-b9c863.js"
-      ]
-    },
-    {
-      "id": "vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a",
-      "files": [
-        "css/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.98fdda85.css",
-        "js/vendors-node_modules_babel_runtime-corejs3_core-js_array_from_js-node_modules_babel_runtime-c-2f850a.js"
-      ]
-    },
-    {
-      "id": "vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e",
-      "files": [
-        "css/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.88bc9d2a.chunk.css",
-        "js/vendors-node_modules_antd_lib_space_Item_js-node_modules_antd_lib_space_index_js-node_modules-360e5e.js"
-      ]
-    },
-    {
-      "id": "vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b",
-      "files": [
-        "css/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.fe6db874.chunk.css",
-        "js/vendors-node_modules_babel_runtime-corejs3_core-js_date_now_js-node_modules_antd_lib_card_ind-28272b.js"
+        "js/A.js"
       ]
     }
   ]
