@@ -1,5 +1,5 @@
 {
-  "hash": "b9261bbf648a9727464b",
+  "hash": "eb15c57600b9f763cd51",
   "publicPath": "/",
   "outputPath": "/Users/lwang/myproject/study/react-ssr/server-bundle",
   "assetsByChunkName": {
@@ -8,13 +8,25 @@
     ],
     "A": [
       "js/A.js"
+    ],
+    "pages-list": [
+      "css/pages-list.chunk.css",
+      "js/pages-list.js"
+    ],
+    "pages-detail": [
+      "css/pages-detail.chunk.css",
+      "js/pages-detail.js"
+    ],
+    "pages-detail-subDetail": [
+      "css/pages-detail-subDetail.chunk.css",
+      "js/pages-detail-subDetail.js"
     ]
   },
   "assets": [
     {
       "type": "asset",
       "name": "js/main.js",
-      "size": 17080,
+      "size": 344195,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -39,8 +51,238 @@
     },
     {
       "type": "asset",
+      "name": "js/10.js",
+      "size": 266844,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        10
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "css/22.chunk.css",
+      "size": 118405,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        22
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "css/10.chunk.css",
+      "size": 97589,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        10
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "js/60.js",
+      "size": 94635,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        60
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "css/348.chunk.css",
+      "size": 48443,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        348
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "js/22.js",
+      "size": 37280,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        22
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "css/280.css",
+      "size": 29679,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        280
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "js/348.js",
+      "size": 13635,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [],
+      "chunkIdHints": [
+        "vendors"
+      ],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        348
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "js/pages-detail.js",
+      "size": 1336,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [
+        "pages-detail"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        898
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "js/pages-list.js",
+      "size": 1015,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [
+        "pages-list"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        801
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "js/pages-detail-subDetail.js",
+      "size": 449,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {
+        "javascriptModule": false,
+        "minimized": true
+      },
+      "chunkNames": [
+        "pages-detail-subDetail"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        220
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
       "name": "js/A.js",
-      "size": 170,
+      "size": 177,
       "emitted": false,
       "comparedForEmit": false,
       "cached": true,
@@ -58,15 +300,76 @@
         546
       ],
       "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "css/pages-detail-subDetail.chunk.css",
+      "size": 144,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [
+        "pages-detail-subDetail"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        220
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "css/pages-detail.chunk.css",
+      "size": 127,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [
+        "pages-detail"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        898
+      ],
+      "auxiliaryChunks": []
+    },
+    {
+      "type": "asset",
+      "name": "css/pages-list.chunk.css",
+      "size": 115,
+      "emitted": false,
+      "comparedForEmit": false,
+      "cached": true,
+      "info": {},
+      "chunkNames": [
+        "pages-list"
+      ],
+      "chunkIdHints": [],
+      "auxiliaryChunkNames": [],
+      "auxiliaryChunkIdHints": [],
+      "chunks": [
+        801
+      ],
+      "auxiliaryChunks": []
     }
   ],
   "namedChunkGroups": {
     "main": {
       "name": "main",
       "chunks": [
+        280,
         179
       ],
       "assets": [
+        {
+          "name": "css/280.css"
+        },
         {
           "name": "js/main.js"
         }
@@ -94,6 +397,109 @@
       "auxiliaryAssetsSize": 0,
       "children": {},
       "childAssets": {}
+    },
+    "pages-list": {
+      "name": "pages-list",
+      "chunks": [
+        348,
+        60,
+        22,
+        801
+      ],
+      "assets": [
+        {
+          "name": "css/348.chunk.css"
+        },
+        {
+          "name": "js/348.js"
+        },
+        {
+          "name": "js/60.js"
+        },
+        {
+          "name": "css/22.chunk.css"
+        },
+        {
+          "name": "js/22.js"
+        },
+        {
+          "name": "css/pages-list.chunk.css"
+        },
+        {
+          "name": "js/pages-list.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-detail": {
+      "name": "pages-detail",
+      "chunks": [
+        348,
+        60,
+        10,
+        898
+      ],
+      "assets": [
+        {
+          "name": "css/348.chunk.css"
+        },
+        {
+          "name": "js/348.js"
+        },
+        {
+          "name": "js/60.js"
+        },
+        {
+          "name": "css/10.chunk.css"
+        },
+        {
+          "name": "js/10.js"
+        },
+        {
+          "name": "css/pages-detail.chunk.css"
+        },
+        {
+          "name": "js/pages-detail.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
+    },
+    "pages-detail-subDetail": {
+      "name": "pages-detail-subDetail",
+      "chunks": [
+        348,
+        220
+      ],
+      "assets": [
+        {
+          "name": "css/348.chunk.css"
+        },
+        {
+          "name": "js/348.js"
+        },
+        {
+          "name": "css/pages-detail-subDetail.chunk.css"
+        },
+        {
+          "name": "js/pages-detail-subDetail.js"
+        }
+      ],
+      "filteredAssets": 0,
+      "assetsSize": null,
+      "filteredAuxiliaryAssets": 0,
+      "auxiliaryAssetsSize": 0,
+      "children": {},
+      "childAssets": {}
     }
   },
   "generator": "loadable-components",
@@ -108,6 +514,60 @@
       "id": 546,
       "files": [
         "js/A.js"
+      ]
+    },
+    {
+      "id": 801,
+      "files": [
+        "css/pages-list.chunk.css",
+        "js/pages-list.js"
+      ]
+    },
+    {
+      "id": 898,
+      "files": [
+        "css/pages-detail.chunk.css",
+        "js/pages-detail.js"
+      ]
+    },
+    {
+      "id": 220,
+      "files": [
+        "css/pages-detail-subDetail.chunk.css",
+        "js/pages-detail-subDetail.js"
+      ]
+    },
+    {
+      "id": 348,
+      "files": [
+        "css/348.chunk.css",
+        "js/348.js"
+      ]
+    },
+    {
+      "id": 60,
+      "files": [
+        "js/60.js"
+      ]
+    },
+    {
+      "id": 10,
+      "files": [
+        "css/10.chunk.css",
+        "js/10.js"
+      ]
+    },
+    {
+      "id": 22,
+      "files": [
+        "css/22.chunk.css",
+        "js/22.js"
+      ]
+    },
+    {
+      "id": 280,
+      "files": [
+        "css/280.css"
       ]
     }
   ]

@@ -81,12 +81,12 @@ function bootstrap() {
     console.log(nodeStats)
     const nodeExtractor = new ChunkExtractor({ statsFile: nodeStats, entrypoints: ['main', 'A'] })
     console.log(nodeExtractor.requireEntrypoint(), 111)
-    const { default: App } = nodeExtractor.requireEntrypoint()
+    const {default: App} = nodeExtractor.requireEntrypoint()
     const webExtractor = new ChunkExtractor({ statsFile: webStats })
     const jsx = nodeExtractor.collectChunks(
-      // <StaticRouter location={ctx.originalUrl} context={{}}>
+      <StaticRouter location={ctx.originalUrl} context={{}}>
         <App />
-      // </StaticRouter>
+      </StaticRouter>
     )
     const html = renderToString(jsx)
     console.log(jsx, 333)
