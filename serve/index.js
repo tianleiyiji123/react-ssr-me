@@ -5,8 +5,6 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { ChunkExtractor } from '@loadable/server'
 
-import { StaticRouter } from 'react-router-dom'
-
 // import renderJsxHtml from './render'
 
 const app = new Koa()
@@ -73,20 +71,19 @@ function bootstrap() {
     './client-bundle/loadable-stats.json'
   )
 
-  app.use(async ctx => {
+  app.use(ctx => {
     console.log(ctx.originalUrl)
     // if (ctx.originalUrl.match(/(list|detail|subDetail)/)) {
     //   ctx.body = renderJsxHtml(ctx)
     // }
-    console.log(nodeStats)
-    const nodeExtractor = new ChunkExtractor({ statsFile: nodeStats, entrypoints: ['main', 'A'] })
-    console.log(nodeExtractor.requireEntrypoint(), 111)
+    const nodeExtractor = new ChunkExtractor({ statsFile: nodeStats })
+
     const {default: App} = nodeExtractor.requireEntrypoint()
+
     const webExtractor = new ChunkExtractor({ statsFile: webStats })
+
     const jsx = nodeExtractor.collectChunks(
-      <StaticRouter location={ctx.originalUrl} context={{}}>
-        <App />
-      </StaticRouter>
+      <App url={ctx.originalUrl} context={{}} />
     )
     const html = renderToString(jsx)
     console.log(jsx, 333)

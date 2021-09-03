@@ -15,15 +15,15 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const nodeExternals = require('webpack-node-externals')
 const theme = require('../package.json').theme
 const serverConfig = {
-  entry: path.resolve(process.cwd(), './src/index-node.tsx'),
+  entry: path.resolve(process.cwd(), './src/index-node.js'),
   output: {
     path: path.resolve(__dirname, '../server-bundle'),
     filename: 'js/[name].js',
-    chunkFilename: "js/[name].js",
+    // chunkFilename: "js/[name].js",
     publicPath: '/',
     libraryTarget: 'commonjs2'
   },
-  // mode: 'development',
+  mode: 'production',
   target: "node",
   module: {
     rules: [{
@@ -121,32 +121,32 @@ const serverConfig = {
   optimization: {
     // minimizer: [new UglifyJsPlugin()],
     runtimeChunk: false,
-    splitChunks: {
-      chunks: 'all',
-      // minSize: 30000,
-      // minChunks: 1,
-      // maxAsyncRequests: 5,
-      // maxInitialRequests: 3,
-      // automaticNameDelimiter: '~',
-      // name: true,
-      // cacheGroups: {
-      //   vendor: {
-      //     test: /[\\/]node_modules[\\/]/,
-      //     name: "vendors",
-      //     priority: -20,
-      //     chunks: "all"
-      //   }
-      // }
-    }
+    // splitChunks: {
+    //   chunks: 'all',
+    //   // minSize: 30000,
+    //   // minChunks: 1,
+    //   // maxAsyncRequests: 5,
+    //   // maxInitialRequests: 3,
+    //   // automaticNameDelimiter: '~',
+    //   // name: true,
+    //   // cacheGroups: {
+    //   //   vendor: {
+    //   //     test: /[\\/]node_modules[\\/]/,
+    //   //     name: "vendors",
+    //   //     priority: -20,
+    //   //     chunks: "all"
+    //   //   }
+    //   // }
+    // }
   },
   plugins: [
+    new LoadablePlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: 'css/[name].css',
       chunkFilename: 'css/[name].chunk.css'
     }),
-    new LoadablePlugin(),
   ],
 }
 module.exports = merge(baseConfig, serverConfig)

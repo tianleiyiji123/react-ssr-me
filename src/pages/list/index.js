@@ -15,6 +15,7 @@ const List = () => {
   //   history.push(`/detail/${encodeURIComponent(imgUrl)}`)
   // }
   const img = `https://unsplash.it/50/50?a=${Date.now()}`
+  console.log(img)
   return (
     <div className={styles.list}>
       {/* <ul>

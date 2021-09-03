@@ -19,12 +19,13 @@ const isDev = process.env.NODE_ENV === 'development'
 const isProd = process.env.NODE_ENV === 'production'
 
 const clientConfig = {
-  entry: path.join(process.cwd(), './src/index-web.tsx'),
+  entry: path.join(process.cwd(), './src/index-web.js'),
   output: {
     path: path.join(__dirname, '../client-bundle/'),
     filename: 'js/[name].js',
-    chunkFilename: "js/[name].js",
-    publicPath: '/'
+    // chunkFilename: "js/[name].js",
+    publicPath: '/',
+    libraryTarget: undefined
   },
   module: {
     rules: [{
@@ -32,7 +33,7 @@ const clientConfig = {
       loader: 'babel-loader',
       exclude: /node_modules/,
       options: {
-        caller: { target: 'node' },
+        caller: { target: 'web' },
       },
     }]
   },
@@ -238,39 +239,39 @@ if (isProd) {
   clientConfig.optimization = {
     // minimizer: [new UglifyJsPlugin()],
     runtimeChunk: true,
-    splitChunks: {
-      chunks: 'all',
-      // minSize: 30000,
-      // minChunks: 1,
-      // maxAsyncRequests: 5,
-      // maxInitialRequests: 3,
-      // automaticNameDelimiter: '~',
-      // name: true,
-      // cacheGroups: {
-      //   vendor: {
-      //     test: /[\\/]node_modules[\\/]/,
-      //     name: "vendors",
-      //     priority: -20,
-      //     chunks: "all"
-      //   }
-      // }
-    }
+    // splitChunks: {
+    //   chunks: 'all',
+    //   // minSize: 30000,
+    //   // minChunks: 1,
+    //   // maxAsyncRequests: 5,
+    //   // maxInitialRequests: 3,
+    //   // automaticNameDelimiter: '~',
+    //   // name: true,
+    //   // cacheGroups: {
+    //   //   vendor: {
+    //   //     test: /[\\/]node_modules[\\/]/,
+    //   //     name: "vendors",
+    //   //     priority: -20,
+    //   //     chunks: "all"
+    //   //   }
+    //   // }
+    // }
   }
 
   clientConfig.plugins = clientConfig.plugins.concat([
+    new LoadablePlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: 'css/[name].css',
       chunkFilename: 'css/[name].chunk.css',
     }),
-    new HtmlWebpackPlugin ({
-      title: '周海涛的个人网',
-      filename: path.join(__dirname, '../client-bundle/index.html'),
-      template: path.join(__dirname, '../public/index.html'),
-      // favicon: path.join(__dirname, '../public/favicon.ico'),
-    }),
-    new LoadablePlugin(),
+    // new HtmlWebpackPlugin ({
+    //   title: '周海涛的个人网',
+    //   filename: path.join(__dirname, '../client-bundle/index.html'),
+    //   template: path.join(__dirname, '../public/index.html'),
+    //   // favicon: path.join(__dirname, '../public/favicon.ico'),
+    // }),
   ])
 
 }
