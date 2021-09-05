@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import { BrowserRouter as Router, Switch } from 'react-router-dom'
-import App from './pages/index'
+import App from './pages/index/index'
 import { loadableReady } from '@loadable/component'
 
 loadableReady(() =>

@@ -1,6 +1,5 @@
 const Koa = require('koa')
 import path from 'path'
-import React from 'react'
 
 import { renderToString } from 'react-dom/server'
 import { ChunkExtractor } from '@loadable/server'
@@ -10,18 +9,21 @@ import { ChunkExtractor } from '@loadable/server'
 const app = new Koa()
 
 app.use(
-  require('koa-static-cache')(path.join(process.cwd(), './client-bundle'), {
-    maxAge: 60,
-    gzip: true
+  require('koa-static')(path.join(process.cwd(), './client-bundle'), {
+    maxage: 60,
+    gzip: true,
+    // preload: false
   })
 )
 app.use(
-  require('koa-static-cache')(path.join(process.cwd(), './server-bundle'), {
-    maxAge: 60,
-    gzip: true
+  require('koa-static')(path.join(process.cwd(), './server-bundle'), {
+    maxage: 60,
+    gzip: true,
+    // preload: false
   })
 )
 
+// TODO webpack开发环境配置no done
 if (process.env.NODE_ENV === 'production') {
   const clientConfig = require(path.join(
     process.cwd(),
@@ -32,16 +34,26 @@ if (process.env.NODE_ENV === 'production') {
     './config/webpack.serve.config.js'
   ))
   const webpack = require('webpack')
-  const compiler = webpack([clientConfig, serveConfig])
   console.log('开始编译webpack')
-  compiler.run(function (err, res) {
-    if (err) {
-      throw new Error(err)
+  const compiler = webpack([clientConfig, serveConfig], function(err, stats) {
+    if (err || stats.hasErrors()) {
+      console.log(err)
       return
     }
-    console.log(res)
+    console.log(stats.toString({
+      chunks: false,  // 使构建过程更静默无输出
+      colors: true    // 在控制台展示颜色
+    }))
     bootstrap()
   })
+  // compiler.run(function (err, stats) {
+  //   if (err || stats.hasErrors()) {
+  //     console.log(err)
+  //     return
+  //   }
+  //   console.log(res)
+    
+  // })
   // const koaWebpack = require('koa-webpack')
   // koaWebpack({
   //   compiler,
@@ -60,35 +72,34 @@ if (process.env.NODE_ENV === 'production') {
   // })
 }
 
+// 启动
 function bootstrap() {
+  // node 端map
   const nodeStats = path.join(
     process.cwd(),
     './server-bundle/loadable-stats.json'
   )
 
+  // web端 map
   const webStats = path.resolve(
     process.cwd(),
     './client-bundle/loadable-stats.json'
   )
-
+  
   app.use(ctx => {
-    console.log(ctx.originalUrl)
-    // if (ctx.originalUrl.match(/(list|detail|subDetail)/)) {
-    //   ctx.body = renderJsxHtml(ctx)
-    // }
+    // 
     const nodeExtractor = new ChunkExtractor({ statsFile: nodeStats })
 
     const {default: App} = nodeExtractor.requireEntrypoint()
 
     const webExtractor = new ChunkExtractor({ statsFile: webStats })
 
-    const jsx = nodeExtractor.collectChunks(
+    const jsx = webExtractor.collectChunks(
       <App url={ctx.originalUrl} context={{}} />
     )
     const html = renderToString(jsx)
-    console.log(jsx, 333)
-    console.log(html, 333)
-
+    
+    // ctx.set('content-type', 'text/html')
     // ctx.set('content-type', 'text/html')
     ctx.body = `
         <!DOCTYPE html>

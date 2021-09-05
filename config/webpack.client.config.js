@@ -19,7 +19,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const isProd = process.env.NODE_ENV === 'production'
 
 const clientConfig = {
-  entry: path.join(process.cwd(), './src/index-web.js'),
+  entry: path.join(process.cwd(), './src/index-web'),
   output: {
     path: path.join(__dirname, '../client-bundle/'),
     filename: 'js/[name].js',
@@ -43,7 +43,7 @@ const clientConfig = {
 if (isDev) {
   const devRules = [{
     test: /\.less$/,
-    include: /node_modules/,
+    include: /[\\/]node_modules[\\/]antd/,
     use: [
       {
         loader: MiniCssExtractPlugin.loader
@@ -53,7 +53,6 @@ if (isDev) {
         options: {
           importLoaders: 2,
           modules: false,
-          esModule: false,
         }
       },
       {
@@ -113,7 +112,7 @@ if (isDev) {
   }]
   clientConfig.entry = [
     "react-hot-loader/patch",
-    path.join(__dirname, '../src/client/index'),
+    path.join(__dirname, '../src/index-web'),
   ]
   clientConfig.output = {
     path: path.join(__dirname, '../public'),
@@ -163,7 +162,7 @@ if (isDev) {
 if (isProd) {
   const prodRules = [{
     test: /\.less$/,
-    include: /node_modules/,
+    include: /[\\/]node_modules[\\/]antd/,
     use: [
       {
         loader: MiniCssExtractPlugin.loader,
@@ -173,7 +172,7 @@ if (isProd) {
         options: {
           importLoaders: 2,
           modules: false,
-          // esModule: false,
+          esModule: true,
         }
       },
       {
@@ -191,7 +190,7 @@ if (isProd) {
     ]
   }, {
     test: /\.less$/,
-    exclude: /node_modules/,
+    exclude: /[\\/]node_modules[\\/]/,
     use: [
       {
         loader: MiniCssExtractPlugin.loader,

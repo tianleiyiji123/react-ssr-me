@@ -1,6 +1,37 @@
 .list {
-  width: 100px;
-  color: red;
+  ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 12.5%);
+    // grid-template-rows: repeat(auto-fill, 100px);
+    // column-gap: 10%;
+    // grid-auto-flow: row dense;
+    grid-auto-rows: 10px;
+    justify-items: center;
+    li {
+      width: 100%;
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .item {
+      grid-row-start: auto;
+    }
+    .item1 {
+      grid-row-start: auto;
+      grid-row-end: span 5;
+    }
+    .item2 {
+      grid-row-start: auto;
+      grid-row-end: span 8;
+    }
+    .item3 {
+      grid-row-start: auto;
+      grid-row-end: span 11;
+    }
+
+  }
 }
 // .xxx {
 //   font-size: 30px;

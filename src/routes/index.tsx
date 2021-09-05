@@ -13,20 +13,20 @@ const loadableConfig = {
 
 const list: RouteItem = {
   path: '/list',
-  component: loadable(() => import('../pages/list'), {
+  component: loadable(() => import('src/pages/list'), {
     ...loadableConfig
   })
 }
 
 const detail: RouteItem = {
   path: '/detail/:imgUrl',
-  component: loadable(() => import('../pages/detail'), {
+  component: loadable(() => import('src/pages/detail'), {
     ...loadableConfig
   })
 }
 const subDetail: RouteItem = {
   path: '/subDetail',
-  component: loadable(() => import('../pages/detail/subDetail'), {
+  component: loadable(() => import('src/pages/detail/subDetail'), {
     ...loadableConfig
   })
 }

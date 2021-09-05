@@ -15,7 +15,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const nodeExternals = require('webpack-node-externals')
 const theme = require('../package.json').theme
 const serverConfig = {
-  entry: path.resolve(process.cwd(), './src/index-node.js'),
+  entry: path.resolve(process.cwd(), './src/index-node'),
   output: {
     path: path.resolve(__dirname, '../server-bundle'),
     filename: 'js/[name].js',
@@ -25,6 +25,7 @@ const serverConfig = {
   },
   mode: 'production',
   target: "node",
+  // externalsPresets: { node: true },
   module: {
     rules: [{
         test: /\.(js|tsx|jsx|ts|mjs)$/,
@@ -36,7 +37,7 @@ const serverConfig = {
       },
       {
         test: /\.less$/,
-        include: /node_modules/,
+        include: /[\\/]node_modules[\\/]antd/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -49,7 +50,6 @@ const serverConfig = {
             options: {
               importLoaders: 2,
               modules: false,
-              // esModule: false,
             }
           },
           {
@@ -67,7 +67,7 @@ const serverConfig = {
         ]
       }, {
         test: /\.less$/,
-        exclude: /node_modules/,
+        exclude: /[\\/]node_modules[\\/]/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
@@ -117,7 +117,9 @@ const serverConfig = {
       }
     ]
   },
-  // externals: ['@loadable/component'],
+  externals: ['@loadable/component', nodeExternals({
+    allowlist: [/antd/, /\.(?!(?:jsx?|json|tsx?)$).{1, 5}/i],
+  })],
   optimization: {
     // minimizer: [new UglifyJsPlugin()],
     runtimeChunk: false,
