@@ -20,6 +20,7 @@
     "@loadable/server": "^5.15.1",
     "antd": "^4.16.13",
     "fs-extra": "^10.0.0",
+    "global": "^4.4.0",
     "koa": "^2.13.1",
     "koa-static": "^5.0.0",
     "koa-static-cache": "^5.1.4",

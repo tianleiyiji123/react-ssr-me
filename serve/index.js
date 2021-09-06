@@ -4,6 +4,10 @@ import path from 'path'
 import { renderToString } from 'react-dom/server'
 import { ChunkExtractor } from '@loadable/server'
 
+// var global = require("global")
+// var document = require("global/document")
+// var window = require("global/window")
+
 // import renderJsxHtml from './render'
 
 const app = new Koa()
