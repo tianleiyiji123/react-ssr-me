@@ -18,6 +18,13 @@ const list: RouteItem = {
   })
 }
 
+const newList: RouteItem = {
+  path: '/',
+  component: loadable(() => import('src/pages/newList'), {
+    ...loadableConfig
+  })
+}
+
 const detail: RouteItem = {
   path: '/detail/:imgUrl',
   component: loadable(() => import('src/pages/detail'), {
@@ -31,4 +38,4 @@ const subDetail: RouteItem = {
   })
 }
 
-export default [list, detail, subDetail]
+export default [list, detail, subDetail, newList]
